@@ -89,6 +89,21 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#1A237E]">Contact Us</h2>
+          <div className="space-y-4">
+            <p className="flex items-center">
+              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:joshuamwila2004@gmail.com" className="hover:text-red-600">joshuamwila2004@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
