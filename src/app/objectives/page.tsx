@@ -1,85 +1,48 @@
 export default function Objectives() {
   const objectives = [
     {
-      title: "Problem Identification & Solution",
-      description: "Identify and solve problems affecting youths and communities through media, gatherings, and initiatives",
-      icon: "🎯"
+      title: "Youth Empowerment",
+      description: "To empower young people with the skills, knowledge, and resources they need to become effective leaders and change-makers in their communities."
     },
     {
-      title: "Purpose & Vision Education",
-      description: "Educate youth on purpose and vision via mentorship, info-sharing, and counselling",
-      icon: "🎓"
+      title: "Community Development",
+      description: "To actively contribute to community development through youth-led initiatives and projects that address local needs and challenges."
     },
     {
-      title: "Political Awareness",
-      description: "Raise awareness on political and governance affairs and inspire positive youth participation",
-      icon: "🗳️"
+      title: "Education & Training",
+      description: "To provide educational opportunities and training programs that enhance youth capabilities and prepare them for future leadership roles."
     },
     {
-      title: "Entrepreneurial Development",
-      description: "Provide entrepreneurial training, information, and funding",
-      icon: "💼"
+      title: "Social Justice",
+      description: "To promote social justice and equality by addressing issues affecting young people and advocating for their rights and well-being."
     },
     {
-      title: "Mental Health Support",
-      description: "Offer mental health rehabilitation and recovery",
-      icon: "🧠"
+      title: "Environmental Stewardship",
+      description: "To encourage environmental awareness and sustainable practices among youth, fostering a sense of responsibility towards our planet."
     },
     {
-      title: "Youth Spaces",
-      description: "Create youth-friendly spaces for diverse programs",
-      icon: "🏛️"
-    },
-    {
-      title: "Learning Platforms",
-      description: "Build platforms for learning, unlearning, and re-learning across spiritual, political, educational and youth-related spheres",
-      icon: "📚"
+      title: "Global Citizenship",
+      description: "To develop global citizens who understand and appreciate cultural diversity and are committed to making positive contributions to society."
     }
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Hero Section */}
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Objectives</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Discover the key areas where we focus our efforts to create positive change and empower youth.
-        </p>
+    <main className="min-h-screen py-16 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-12">Our Objectives</h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {objectives.map((objective, index) => (
+            <div 
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            >
+              <h2 className="text-2xl font-semibold mb-4 text-red-600">{objective.title}</h2>
+              <p className="text-gray-700">{objective.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-
-      {/* Objectives Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {objectives.map((objective, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
-          >
-            <div className="text-4xl mb-4">{objective.icon}</div>
-            <h3 className="text-xl font-semibold text-red-600 mb-3">
-              {objective.title}
-            </h3>
-            <p className="text-gray-600">
-              {objective.description}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      {/* Call to Action */}
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
-          Ready to Support Our Objectives?
-        </h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join us in our mission to create positive change and empower youth across communities.
-        </p>
-        <a
-          href="/join"
-          className="inline-block bg-red-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors"
-        >
-          Get Involved
-        </a>
-      </div>
-    </div>
+    </main>
   );
 } 
